@@ -24,6 +24,7 @@ function adicionar(){
 }
 
 function limpar(){
+    totalGeralCarrinho = 0;
     valorTotal.innerText = '';
     let carrinho = document.getElementById('lista-produtos');
     carrinho.innerHTML = `<section class="carrinho__produtos__produto">
