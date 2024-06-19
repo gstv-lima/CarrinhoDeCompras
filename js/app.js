@@ -1,5 +1,6 @@
 let totalGeralCarrinho = 0;
 
+
 function adicionar(){
     //Recupera valores - nome do produto - quantidade e valor;
     let produto = document.getElementById('produto').value;
@@ -23,5 +24,10 @@ function adicionar(){
 }
 
 function limpar(){
-
+    valorTotal.innerText = '';
+    let carrinho = document.getElementById('lista-produtos');
+    carrinho.innerHTML = `<section class="carrinho__produtos__produto">
+          <span class="texto-azul"></span><span class="texto-azul"></span>
+        </section>`;
+    
 }
