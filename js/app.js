@@ -20,7 +20,7 @@ function adicionar(){
     
     valorTotal = document.getElementById('valor-total');
     valorTotal.innerText = `R$${totalGeralCarrinho}`;
-
+    qntd = document.getElementById('quantidade').value = '';
 }
 
 function limpar(){
@@ -29,5 +29,4 @@ function limpar(){
     carrinho.innerHTML = `<section class="carrinho__produtos__produto">
           <span class="texto-azul"></span><span class="texto-azul"></span>
         </section>`;
-    
 }
