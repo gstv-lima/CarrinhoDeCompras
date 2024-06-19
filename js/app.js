@@ -5,7 +5,7 @@ function adicionar(){
     //Recupera valores - nome do produto - quantidade e valor;
     let produto = document.getElementById('produto').value;
     let nomeProduto = produto.split('-')[0];
-    let valUnidade = produto.split('R$')[1];
+    let valUnidade = parseFloat(produto.split('R$')[1]);
     let qntd = document.getElementById('quantidade').value;
     
     //Calcula o preço e mostra produto no carrinho;
@@ -19,7 +19,7 @@ function adicionar(){
     totalGeralCarrinho = totalGeralCarrinho + preço;
     
     valorTotal = document.getElementById('valor-total');
-    valorTotal.innerText = `R$${totalGeralCarrinho}`;
+    valorTotal.innerText = `R$${totalGeralCarrinho.toLocaleString('pt-BR', { minimumFractionDigits: 2 })}`;
     qntd = document.getElementById('quantidade').value = '';
 }
 
